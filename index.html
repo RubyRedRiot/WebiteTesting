@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Annapuram Cafe - Authentic South Indian Food in Varanasi</title>
+    <meta name="description" content="Best South Indian Cafe in Varanasi near Kaazi Sarai. Famous for Benne Dosa, Thatte Idli, Filter Coffee & beautiful outdoor dining.">
+    <meta name="keywords" content="Annapuram Cafe, Varanasi Cafe, South Indian Food Varanasi, Best Dosa Varanasi, Outdoor Cafe">
+    <meta name="author" content="The Annapuram Cafe">
+
+    <!-- 2. Social Sharing (For WhatsApp, Facebook, Instagram previews) -->
+    <meta property="og:title" content="The Annapuram Cafe - Where Every Bite is a Blessing">
+    <meta property="og:description" content="Visit us for authentic Dosa, Idli, and Coffee under the stars in Varanasi.">
+    <meta property="og:image" content="1000031514.jpg"> <!-- This image will show on WhatsApp cards -->
+    <meta property="og:url" content="https://theannapuramcafe.com"> <!-- Change this to your real website link later -->
+    <meta property="og:type" content="restaurant.restaurant">
+
+    <!-- 3. URL Icon (Favicon) -->
+    <!-- Make sure you have a square image named 'logo.png' in the folder -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-gold': '#F59E0B',
+                        'brand-dark': '#1F2937',
+                        'brand-cream': '#FFFBEB',
+                        'brand-orange': '#EA580C',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'serif': ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #1f2937;
+            /* Using your entrance photo */
+            background-image: url("Entra.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        /* Hide scrollbar for gallery snap */
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Mobile Specific adjustments */
+        @media (max-width: 640px) {
+            .hero-pattern {
+                background-attachment: scroll; /* Better performance on mobile */
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+            padding-bottom: 70px; /* Space for bottom nav */
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-800 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-sm shadow-md fixed w-full z-50 transition-all duration-300 top-0" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 md:h-20 items-center">
+                <!-- Logo Area -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                     <img src="D:\Temp-files-EWWW\AnapurnaMobWeb\LogoGOGO.png" alt="Logo" class="h-10 w-auto rounded-lg">
+                    <div>
+                        <h1 class="font-serif font-bold text-lg md:text-2xl text-gray-900 leading-none">The Annapuram Cafe</h1>
+                        <p class="text-[10px] text-brand-orange font-bold tracking-widest uppercase"> Varanasi</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-brand-orange font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-brand-orange font-medium transition">About</a>
+                    <a href="#menu" class="text-gray-700 hover:text-brand-orange font-medium transition">Menu</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-brand-orange font-medium transition">Gallery</a>
+                    <a href="#contact" class="bg-brand-orange text-white px-5 py-2 rounded-full font-medium hover:bg-orange-700 transition shadow-lg shadow-orange-500/30">Visit Us</a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-gray-700 p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-3 text-gray-700 hover:bg-orange-50 font-medium border-b border-gray-100">Home</a>
+                <a href="#menu" onclick="toggleMobileMenu()" class="block px-3 py-3 text-gray-700 hover:bg-orange-50 font-medium border-b border-gray-100">Full Menu</a>
+                <a href="#gallery" onclick="toggleMobileMenu()" class="block px-3 py-3 text-gray-700 hover:bg-orange-50 font-medium border-b border-gray-100">Gallery</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-3 text-brand-orange font-bold">Contact & Location</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[85vh] md:h-screen flex items-center justify-center hero-pattern text-white">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/30"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-10">
+            <div class="mb-4 inline-block animate-bounce">
+                <i class="fa-solid fa-leaf text-brand-gold text-3xl md:text-4xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-7xl font-serif font-bold mb-4 leading-tight shadow-sm">
+                Every Bite is a <br/><span class="text-brand-gold">Blessing</span>
+            </h1>
+            <p class="text-base md:text-xl text-gray-200 mb-8 max-w-lg mx-auto font-light leading-relaxed">
+                Authentic South Indian flavors under the Varanasi sky. Open 10 AM to 9:30 PM.
+            </p>
+            <div class="flex flex-col gap-3 sm:flex-row justify-center">
+                <a href="#menu" class="bg-brand-gold text-gray-900 px-8 py-3.5 rounded-full font-bold shadow-lg shadow-yellow-500/20 active:scale-95 transition">
+                    Browse Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile-First Features (Horizontal Scroll) -->
+    <section id="about" class="py-10 bg-white">
+        <div class="px-4">
+            <div class="flex gap-4 overflow-x-auto hide-scroll snap-x snap-mandatory pb-4">
+                <!-- Feature 1 -->
+                <div class="snap-center shrink-0 w-64 bg-brand-cream p-5 rounded-xl border border-orange-100 shadow-sm text-center">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3 text-brand-orange text-xl">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h4 class="font-bold mb-1">Freshly Made</h4>
+                    <p class="text-xs text-gray-600">Pure ghee & authentic spices used daily.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="snap-center shrink-0 w-64 bg-brand-cream p-5 rounded-xl border border-orange-100 shadow-sm text-center">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3 text-brand-orange text-xl">
+                        <i class="fa-regular fa-moon"></i>
+                    </div>
+                    <h4 class="font-bold mb-1">Open Air Vibe</h4>
+                    <p class="text-xs text-gray-600">Beautiful outdoor seating with fairy lights.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="snap-center shrink-0 w-64 bg-brand-cream p-5 rounded-xl border border-orange-100 shadow-sm text-center">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3 text-brand-orange text-xl">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <h4 class="font-bold mb-1">Filter Coffee</h4>
+                    <p class="text-xs text-gray-600">The perfect South Indian finish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-12 bg-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl font-serif font-bold text-gray-900">Our Menu</h3>
+                <p class="text-gray-500 text-sm mt-1">Tap to explore</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex md:block">
+                    <div class="w-32 md:w-full h-32 md:h-48 shrink-0">
+                        <img src="D:\Temp-files-EWWW\AnapurnaMobWeb\1000031496.jpg" alt="Benne Dosa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex flex-col justify-center">
+                        <h4 class="font-bold text-gray-900 text-lg">Benne Dosa</h4>
+                        <p class="text-gray-500 text-xs mb-2">Classic butter dosa, rich & crispy.</p>
+                        <span class="inline-block bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded w-fit">VEG</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex md:block">
+                    <div class="w-32 md:w-full h-32 md:h-48 shrink-0">
+                        <img src="D:\Temp-files-EWWW\AnapurnaMobWeb\1000031490.jpg" alt="Ghee Podi Masala" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex flex-col justify-center">
+                        <h4 class="font-bold text-gray-900 text-lg">Ghee Podi Masala</h4>
+                        <p class="text-gray-500 text-xs mb-2">Spicy lentil powder & potato masala.</p>
+                        <span class="inline-block bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded w-fit">VEG</span>
+                    </div>
+                </div>
+
+                <!-- Item 3 (Button Idli) -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex md:block">
+                    <div class="w-32 md:w-full h-32 md:h-48 shrink-0">
+                        <img src="D:\Temp-files-EWWW\AnapurnaMobWeb\1000031499.jpg" alt="Button Idli" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex flex-col justify-center">
+                        <h4 class="font-bold text-gray-900 text-lg">Button Idli</h4>
+                        <p class="text-gray-500 text-xs mb-2">Mini idlis submerged in hot Sambar.</p>
+                        <span class="inline-block bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded w-fit">VEG</span>
+                    </div>
+                </div>
+
+                 <!-- Item 4 -->
+                 <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex md:block">
+                    <div class="w-32 md:w-full h-32 md:h-48 shrink-0">
+                        <img src="D:\Temp-files-EWWW\AnapurnaMobWeb\1000031502.jpg" alt="Uttapam" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex flex-col justify-center">
+                        <h4 class="font-bold text-gray-900 text-lg">Uttapam</h4>
+                        <p class="text-gray-500 text-xs mb-2">Thick savory pancake with toppings.</p>
+                        <span class="inline-block bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded w-fit">VEG</span>
+                    </div>
+                </div>
+
+                 <!-- Item 5 -->
+                 <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex md:block">
+                    <div class="w-32 md:w-full h-32 md:h-48 shrink-0">
+                        <img src= "D:\Temp-files-EWWW\AnapurnaMobWeb\1000031505.jpg" alt="Thatte Idli" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex flex-col justify-center">
+                        <h4 class="font-bold text-gray-900 text-lg">Thatte Idli</h4>
+                        <p class="text-gray-500 text-xs mb-2">Large, plate-sized fluffy idli.</p>
+                        <span class="inline-block bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded w-fit">VEG</span>
+                    </div>
+                </div>
+
+                 <!-- Item 6 -->
+                 <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex md:block">
+                    <div class="w-32 md:w-full h-32 md:h-48 shrink-0">
+                        <img src="D:\Temp-files-EWWW\AnapurnaMobWeb\Coffee.jpg" alt="Filter Coffee" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4 flex flex-col justify-center">
+                        <h4 class="font-bold text-gray-900 text-lg">Filter Coffee</h4>
+                        <p class="text-gray-500 text-xs mb-2">Strong, aromatic South Indian brew.</p>
+                        <span class="inline-block bg-orange-100 text-orange-800 text-[10px] font-bold px-2 py-1 rounded w-fit">HOT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Mobile Carousel) -->
+    <section id="gallery" class="py-12 bg-white">
+        <div class="px-4">
+            <h3 class="text-2xl font-serif font-bold text-gray-900 mb-6 px-2">The Ambience</h3>
+            
+            <!-- Horizontal Scroll Container -->
+            <div class="flex gap-4 overflow-x-auto hide-scroll snap-x snap-mandatory">
+                <div class="snap-center shrink-0 w-[85vw] md:w-96 h-64 rounded-xl overflow-hidden shadow-md relative">
+                    <img src="1000031508.jpg" alt="Cafe Lighting" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <span class="text-white text-sm font-medium">Beautiful Evening Lights</span>
+                    </div>
+                </div>
+                <div class="snap-center shrink-0 w-[85vw] md:w-96 h-64 rounded-xl overflow-hidden shadow-md relative">
+                    <img src="1000031520.jpg" alt="Outdoor Seating" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <span class="text-white text-sm font-medium">Spacious Outdoor Seating</span>
+                    </div>
+                </div>
+                <div class="snap-center shrink-0 w-[85vw] md:w-96 h-64 rounded-xl overflow-hidden shadow-md relative">
+                    <img src="1000031517.jpg" alt="Cafe Food" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <span class="text-white text-sm font-medium">Cozy Atmosphere</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 text-xs mt-4 md:hidden">Swipe to see more <i class="fa-solid fa-arrow-right ml-1"></i></p>
+        </div>
+    </section>
+
+    <!-- Location Card -->
+    <section id="contact" class="py-12 bg-brand-cream border-t border-orange-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="bg-brand-orange text-white p-3 rounded-full">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">Visit Us</h3>
+                </div>
+                <p class="text-gray-600 mb-4">Sarai Kaazi, Kaazi Sarai,<br>Near Footover Bridge, Varanasi,<br>Uttar Pradesh 221105</p>
+                <div class="w-full h-48 bg-gray-200 rounded-xl mb-4 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <a href="https://maps.google.com/?q=The+Annapuram+Cafe+Varanasi" target="_blank" class="bg-white px-4 py-2 rounded-lg shadow font-medium text-sm flex items-center gap-2">
+                            <i class="fa-brands fa-google text-blue-500"></i> View Map
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8 text-gray-400 text-xs pb-10">
+                &copy; 2026 The Annapuram Cafe
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918173031005" target="_blank" class="fixed bottom-20 right-4 z-40 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition hover:scale-110 flex items-center justify-center">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Fixed Mobile Bottom Bar -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 flex justify-between items-center px-6 py-2 md:hidden">
+        <a href="tel:+918173031005" class="flex flex-col items-center text-gray-500 hover:text-brand-orange">
+            <i class="fa-solid fa-phone text-xl mb-1"></i>
+            <span class="text-[10px] font-medium">Call</span>
+        </a>
+        <a href="#menu" class="flex flex-col items-center text-brand-orange">
+            <div class="bg-brand-orange text-white p-3 rounded-full -mt-8 shadow-lg border-4 border-white">
+                <i class="fa-solid fa-utensils text-xl"></i>
+            </div>
+            <span class="text-[10px] font-bold mt-1">Menu</span>
+        </a>
+        <a href="https://maps.google.com/?q=The+Annapuram+Cafe+Varanasi" target="_blank" class="flex flex-col items-center text-gray-500 hover:text-brand-orange">
+            <i class="fa-solid fa-map-location-dot text-xl mb-1"></i>
+            <span class="text-[10px] font-medium">Map</span>
+        </a>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
